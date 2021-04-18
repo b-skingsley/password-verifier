@@ -32,8 +32,7 @@ describe("validPassword", () => {
   });
 
   it("should return true if password is valid", () => {
-    expect(function() {
-      validPassword('Password1');
-    }).toBe(true);
+    const valid = validPassword('Password1');
+    expect(valid).toBe(true);
   });
 });
