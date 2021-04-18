@@ -32,6 +32,8 @@ const validPassword = (password) => {
     return "Password is OK, satisfy all conditions for Strong password";
   }
 
+  throw new Error("Your password must satisfy at least 3 conditions")
+
   // // The password should be larger than 8 chars
   // if (password.length <= 8) {
   //   throw new Error("Your password must be more than 8 characters");
