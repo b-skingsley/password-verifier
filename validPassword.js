@@ -28,7 +28,7 @@ const validPassword = (password) => {
   }
 
   // So if the password satisfies at least one of items 1, 3 or 5 then it will be OK
-  if (password.length > 8 || /[A-Z]/.test(password) || /[0-9]/.test(password)) {
+  if (password.length > 8 || /[A-Z0-9]/.test(password)) {
     return "Password is OK, satisfy all conditions for Strong password";
   }
 
