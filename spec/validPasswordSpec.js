@@ -19,9 +19,9 @@ describe("validPassword", () => {
     const validCondition3 = validPassword('Pass');
     const validCondition5 = validPassword('pass1');
 
-    expect(validCondition1).toBe("Password is OK");
-    expect(validCondition3).toBe("Password is OK");
-    expect(validCondition5).toBe("Password is OK");
+    expect(validCondition1).toBe("Password is OK, satisfy all conditions for Strong password");
+    expect(validCondition3).toBe("Password is OK, satisfy all conditions for Strong password");
+    expect(validCondition5).toBe("Password is OK, satisfy all conditions for Strong password");
   });
 
   it("should throw exception if password is less than 9 chars", () => {
