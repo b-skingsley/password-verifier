@@ -24,23 +24,29 @@ describe("validPassword", () => {
     expect(validCondition5).toBe("Password is OK, satisfy all conditions for Strong password");
   });
 
-  it("should throw exception if password is less than 9 chars", () => {
+  it("should throw exception if password doesn't satisfy at least 3 of the 5 conditions", () => {
     expect(function() {
       validPassword('pass');
-    }).toThrowError("Your password must be more than 8 characters");
+    }).toThrowError("Your password must satisfy at least 3 conditions");
   });
 
-  it("should throw exception if password doesn't contain an uppercase letter", () => {
-    expect(function() {
-      validPassword('password1');
-    }).toThrowError("Your password must contain an uppercase letter");
-  });
+  // it("should throw exception if password is less than 9 chars", () => {
+  //   expect(function() {
+  //     validPassword('pass');
+  //   }).toThrowError("Your password must be more than 8 characters");
+  // });
 
-  it("should throw exception if password doesn't contain a number", () => {
-    expect(function() {
-      validPassword('PaSsWoRdS');
-    }).toThrowError("Your password must contain a number");
-  });
+  // it("should throw exception if password doesn't contain an uppercase letter", () => {
+  //   expect(function() {
+  //     validPassword('password1');
+  //   }).toThrowError("Your password must contain an uppercase letter");
+  // });
+
+  // it("should throw exception if password doesn't contain a number", () => {
+  //   expect(function() {
+  //     validPassword('PaSsWoRdS');
+  //   }).toThrowError("Your password must contain a number");
+  // });
 
   it("should return password is strong if all requirements are met", () => {
     const valid = validPassword('Password1');
